@@ -1,0 +1,4 @@
+-learned about nested routing
+-basic routing set-up
+-setting it up in main.jsx
+-component does not work need to use element
