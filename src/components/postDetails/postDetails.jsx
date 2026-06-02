@@ -1,7 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 
 const PostDetails = ({ post }) => {
+    const navigate=useNavigate();
+    const handleNavigate=()=>{
+        navigate('/More');
+    }
     return (
         <div>
             <div style={{ border: "2px solid red" }}>
@@ -9,6 +13,7 @@ const PostDetails = ({ post }) => {
                 <button>
                     <Link to={`/post/${post.id}`}>View Details</Link>
                 </button>
+                <button onClick={handleNavigate}>More...</button>
             </div>
         </div>
     )

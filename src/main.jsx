@@ -13,6 +13,7 @@ import Todo from './todo.jsx'
 import Suser from './components/sUser/Suser.jsx';
 import Post from './components/post/post.jsx';
 import Spost from './components/postDetails/Spost.jsx';
+import More from './components/More.jsx';
 
 const userP = fetch(
   'https://jsonplaceholder.typicode.com/todos'
@@ -82,7 +83,11 @@ const router = createBrowserRouter([
 
   { path: "about", element: <div>about page</div> },
   { path: "services", element: <div>services</div> },
-  { path: "blog", element: <div>blog</div> }
+  { path: "blog", element: <div>blog</div> },
+  {
+  path: "/more",
+  element: <More />
+}
 ]);
 
 createRoot(document.getElementById('root')).render(
