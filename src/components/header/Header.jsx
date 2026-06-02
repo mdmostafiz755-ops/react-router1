@@ -52,6 +52,11 @@ const Header = () => {
               Todo
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/post" style={linkStyle}>
+              posts
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

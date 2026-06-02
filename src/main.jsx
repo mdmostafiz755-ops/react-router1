@@ -11,6 +11,8 @@ import Laptop from './components/LAptop.jsx'
 import User from './components/user/User.jsx'
 import Todo from './todo.jsx'
 import Suser from './components/sUser/Suser.jsx';
+import Post from './components/post/post.jsx';
+import Spost from './components/postDetails/Spost.jsx';
 
 const userP = fetch(
   'https://jsonplaceholder.typicode.com/todos'
@@ -53,6 +55,18 @@ const router = createBrowserRouter([
           );
         },
         element: <Suser />
+      },
+      {
+        path: 'post',
+        loader: () => fetch('https://jsonplaceholder.typicode.com/posts'),
+        element: <Post />
+      },
+      {
+        path: 'post/:postId',
+        loader: ({ params }) => {
+          return fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`);
+        },
+        element: <Spost></Spost>
       },
 
       {
